@@ -7,7 +7,7 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
     allow do
-        origins 'http://localhost:3001'
+        origins 'https://msico-rails-backend.herokuapp.com/'
 
         resource '*',
         headers: :any,
@@ -15,7 +15,7 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
         credntials: true
     end 
     allow do
-        origins 'http://localhost:3000'
+        origins 'https://www.carlpalumbo.com/'
 
         resource '*',
         headers: :any,
