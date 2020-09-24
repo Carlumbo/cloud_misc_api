@@ -1,5 +1,7 @@
 class DataController < ApplicationController
   before_action :set_datum, only: [:show, :update, :destroy]
+  include CurrentUserConcern
+    
 
   # GET /data
   def index
