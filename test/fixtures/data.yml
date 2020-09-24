@@ -2,8 +2,12 @@
 
 one:
   type: MyText
-  user: 
+  title: MyText
+  data: 1.5
+  user_id: 1
 
 two:
   type: MyText
-  user: 
+  title: MyText
+  data: 1.5
+  user_id: 1

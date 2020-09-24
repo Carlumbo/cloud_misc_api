@@ -12,7 +12,7 @@ class DataControllerTest < ActionDispatch::IntegrationTest
 
   test "should create datum" do
     assert_difference('Datum.count') do
-      post data_url, params: { datum: { type: @datum.type, user: @datum.user } }, as: :json
+      post data_url, params: { datum: { data: @datum.data, title: @datum.title, type: @datum.type, user_id: @datum.user_id } }, as: :json
     end
 
     assert_response 201
@@ -24,7 +24,7 @@ class DataControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update datum" do
-    patch datum_url(@datum), params: { datum: { type: @datum.type, user: @datum.user } }, as: :json
+    patch datum_url(@datum), params: { datum: { data: @datum.data, title: @datum.title, type: @datum.type, user_id: @datum.user_id } }, as: :json
     assert_response 200
   end
 

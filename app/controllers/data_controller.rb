@@ -46,6 +46,6 @@ class DataController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def datum_params
-      params.require(:datum).permit(:type, :user)
+      params.require(:datum).permit(:type_of, :title, :data_point, :user_id)
     end
 end
