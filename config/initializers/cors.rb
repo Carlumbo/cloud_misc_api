@@ -7,20 +7,18 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
     allow do
-        origins 'https://msico-rails-backend.herokuapp.com/'
+        origins '*'
 
         resource '*',
         headers: :any,
         methods: [:get, :post, :put, :patch, :delete, :options, :head],
-        credntials: true
     end 
     allow do
-        origins 'https://www.carlpalumbo.com/'
+        origins '*'
 
         resource '*',
         headers: :any,
         methods: [:get, :post, :put, :patch, :delete, :options, :head],
-    credentials: true
      end
 end
 
