@@ -4,9 +4,9 @@ class RegistrationsController < ApplicationController
             email: params['user']['email'], 
             password: params['user']['password'],
             password_confirmation: params['user']['password_confirmation'],
-            authorization: "UNIQUE-KEY",
+            authorization: params['user']['authorization'],
             )
-       if user
+        if user
             session[:user_id] = user.id
             render json: {
                 status: :created, 
@@ -14,5 +14,6 @@ class RegistrationsController < ApplicationController
             }    
         else 
             render json: { status: 500}
+        end 
     end 
 end 
