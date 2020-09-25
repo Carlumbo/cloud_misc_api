@@ -25,7 +25,8 @@ module CloudMiscApi
     config.load_defaults 6.0
     
     config.middleware.use ActionDispatch::Cookies
-    config.middleware.use ActionDispatch::Session::CookieStore, key: '_namespace_key'
+    config.middleware.use ActionDispatch::Session::CookieStore, key: 'heroku-session-affinity'
+    
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
